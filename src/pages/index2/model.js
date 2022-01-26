@@ -13,7 +13,7 @@ const model = {
             count: state.count + 1,
           })
           resolve()
-        }, 3000)
+        }, 1500)
       })
     },
   },

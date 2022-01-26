@@ -1,25 +1,21 @@
 /* eslint-disable no-unused-vars */
-function toggleCollapsedAjax(flag) {
-  return new Promise((resolve) => {
-    setTimeout(() => {
-      resolve(!flag)
-    }, 1000)
-  })
-}
-
 const initialState = {
-  isCollapsed: false,
+  globalCount: 0,
 }
-
 const model = {
   name: 'global',
   state: initialState,
   actions: {
-    async toggleCollapsedFunc({ dispatch, getState, payload }) {
-      await toggleCollapsedAjax()
-      const state = getState().global
-      dispatch('global/save', {
-        isCollapsed: !state.isCollapsed,
+    addGlobalCount({ dispatch, getState, payload }) {
+      const state = getState()
+      const { global } = state // 因为这里是分模块的 所以state中有2层
+      return new Promise((resolve) => {
+        setTimeout(() => {
+          dispatch('global/save', {
+            globalCount: global.globalCount + 1,
+          })
+          return resolve()
+        }, 1500)
       })
     },
   },
