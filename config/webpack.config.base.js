@@ -1,6 +1,5 @@
 const webpack = require('webpack')
 const path = require('path')
-const HtmlWebpackPlugin = require('html-webpack-plugin') // html模板
 const cssLoader = {
   loader: 'css-loader',
   options: {
@@ -79,10 +78,6 @@ module.exports = {
   },
   devtool: 'eval-source-map',
   plugins: [
-    new HtmlWebpackPlugin({
-      template: './src/index.html',
-      filename: 'index.html',
-    }),
     // 全局自动引入react // 不用每个文件都 import React from 'react'
     new webpack.ProvidePlugin({
       React: 'react',

@@ -1,13 +1,11 @@
 {
-  "name": "micro-app-main",
+  "name": "react-min-model",
   "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
+  "description": "react状态管理",
+  "main": "npmdist/react-min-model.min.js",
   "scripts": {
     "start": "cross-env MODE=development-mode ENV=development webpack serve",
-    "start:prod": "cross-env MODE=development-mode ENV=production webpack serve",
-    "build:test": "cross-env MODE=production-mode ENV=development webpack",
-    "build:prod": "cross-env MODE=production-mode ENV=production webpack",
+    "build": "cross-env MODE=production-mode ENV=production webpack",
     "prepare": "husky install"
   },
   "author": "",
