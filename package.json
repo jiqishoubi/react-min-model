@@ -1,6 +1,6 @@
 {
   "name": "react-min-model",
-  "version": "1.0.1",
+  "version": "1.0.5",
   "description": "react状态管理",
   "main": "npmdist/react-min-model.min.js",
   "scripts": {
@@ -54,5 +54,9 @@
   },
   "lint-staged": {
     "**/*.{js,jsx,ts,tsx,vue,css,less,scss,md,json}": "prettier --write"
+  },
+  "peerDependencies": {
+    "react": "^16.8.4",
+    "react-dom": "^16.8.4"
   }
 }

@@ -78,10 +78,6 @@ module.exports = {
   },
   devtool: 'eval-source-map',
   plugins: [
-    // 全局自动引入react // 不用每个文件都 import React from 'react'
-    new webpack.ProvidePlugin({
-      React: 'react',
-    }),
     // 把编译时的变量设置到项目里
     new webpack.DefinePlugin({
       'process.env': {

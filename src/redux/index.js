@@ -1,5 +1,5 @@
 /// models核心代码
-import { useContext, useRef, useEffect, useReducer, createContext } from 'react'
+import React, { useContext, useRef, useEffect, useReducer, createContext } from 'react'
 import lodash from 'lodash'
 
 /**
@@ -237,7 +237,7 @@ export default function generateModel(param) {
   })
 
   // 给Component包裹Provider的高阶组件
-  function connectProvider(Component) {
+  const connectProvider = (Component) => {
     return function ProviderWrappedComponent(props) {
       return (
         <Provider>
